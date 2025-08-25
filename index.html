@@ -1,65 +1,125 @@
-<h1>ImpactPort</h1>
-<p>AI-enabled Impact Portfolio Management Tool</p>
-
-
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ImpactPort — AI‑enabled Impact Portfolio Management</title>
-  <meta name="description" content="ImpactPort is an AI-enabled impact portfolio management tool unifying project management, financial analysis, and impact analytics." />
+  <title>Project A — AI‑powered Impact Portfolio Management</title>
+  <meta name="description" content="Project A is an AI-enabled investment management solution unifying financial performance and climate impact for PE/VC and impact funds." />
   <meta name="robots" content="index,follow" />
+  <!-- Basic OG for clean link previews -->
+  <meta property="og:title" content="Project A — AI‑powered Impact Portfolio Management" />
+  <meta property="og:description" content="Bridge financial rigor and climate impact in one tool — from screening to LP reporting." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://impactport.com" />
   <style>
     :root { --bg:#0b1020; --fg:#eaf0ff; --muted:#a9b3c7; --accent:#5ee1a0; }
     html,body { height:100%; margin:0; }
     body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background:var(--bg); color:var(--fg); }
-    .wrap { max-width: 960px; margin: 0 auto; padding: 56px 20px 80px; }
+    .wrap { max-width: 1000px; margin: 0 auto; padding: 56px 20px 80px; }
     header { display:flex; align-items:center; justify-content:space-between; margin-bottom:24px; }
-    .logo { font-weight:700; letter-spacing:.3px; }
+    .logo { font-weight:800; letter-spacing:.3px; }
     nav a { color:var(--muted); text-decoration:none; margin-left:16px; font-size:14px; }
+    nav a:hover, nav a:focus { color:var(--fg); }
     .hero { padding: 64px 0; }
-    h1 { font-size: clamp(28px, 5vw, 44px); line-height:1.1; margin:0 0 16px; }
-    p.lead { color:var(--muted); font-size: clamp(16px, 2.8vw, 18px); margin:0 0 28px; max-width: 720px; }
+    h1 { font-size: clamp(28px, 5vw, 44px); line-height:1.1; margin:0 0 12px; }
+    h2 { font-size: clamp(20px, 3.5vw, 28px); margin: 40px 0 12px; }
+    p.lead { color:var(--muted); font-size: clamp(16px, 2.8vw, 18px); margin:0 0 28px; max-width: 780px; }
+    ul { color:var(--muted); margin: 8px 0 20px; padding-left: 18px; }
+    li { margin: 6px 0; }
     .cta { display:inline-block; padding:14px 20px; border-radius:10px; background:var(--accent); color:#0b1020; font-weight:700; text-decoration:none; }
     .cta:focus, .cta:hover { opacity:.9; }
     .ghost { margin-left:12px; border:1px solid #2b3557; color:var(--fg); background:transparent; }
+    .grid { display:grid; gap:18px; grid-template-columns: 1fr; }
+    @media (min-width: 760px) { .grid { grid-template-columns: 1fr 1fr; } }
+    .card { border:1px solid #1b2547; border-radius:12px; padding:18px; background: rgba(255,255,255,0.02); }
     footer { margin-top:80px; border-top:1px solid #1b2547; padding-top:20px; color:var(--muted); font-size:13px; }
+    a { color: var(--accent); }
   </style>
 </head>
 <body>
   <div class="wrap">
     <header>
-      <div class="logo">ImpactPort</div>
+      <div class="logo">Project A</div>
       <nav>
-        <a href="#how">How it works</a>
+        <a href="#problem">Problem</a>
+        <a href="#approach">Approach</a>
+        <a href="#who">Who We Are</a>
+        <a href="#join">Join Us</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
 
-    <section class="hero">
-      <h1>AI‑enabled Impact Portfolio Management</h1>
+    <section class="hero" aria-labelledby="hero-title">
+      <h1 id="hero-title">AI‑powered Impact Portfolio Management</h1>
       <p class="lead">
-        Unifies project management, financial modeling, and impact analytics into one workflow —
-        purpose‑built for impact investors, PE/VC, and MDB‑aligned funds.
+        Project A is a digital investment management solution designed to bridge the gap between financial performance and climate impact.
+        It combines private equity discipline with sustainability frameworks to help investors deploy capital faster, smarter, and with measurable outcomes.
       </p>
       <a class="cta" href="https://demo.impactport.com" target="_blank" rel="noopener noreferrer">👉 Try the Live Demo</a>
-      <a class="cta ghost" href="#contact">Get updates</a>
+      <a class="cta ghost" href="#join">Get updates</a>
     </section>
 
-    <section id="how">
-      <h2>How it works</h2>
+    <section id="problem" aria-labelledby="problem-title">
+      <h2 id="problem-title">The Problem We Solve</h2>
+      <ul>
+        <li><strong>Fragmented &amp; unreliable data</strong> — ESG, carbon, and social impact data are siloed, inconsistent, and costly to verify.</li>
+        <li><strong>No unified lens for finance + impact</strong> — Current tools either model returns (ROI, IRR, LBO) or impact (SDGs, carbon removal, biodiversity). Funds lack a single platform to weigh risk, return, and impact together.</li>
+        <li><strong>Lean investment teams</strong> — PE and VC funds run lean, with limited in-house data science or climate analytics. Existing SaaS tools are either too generic or too costly to customize.</li>
+      </ul>
+    </section>
+
+    <section id="approach" aria-labelledby="approach-title">
+      <h2 id="approach-title">Our Approach</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>AI‑enabled modeling</h3>
+          <p class="lead">Integrated financial analytics (DCF, NPV, ROI, IRR) with impact metrics (carbon, water, agriculture, biodiversity).</p>
+        </div>
+        <div class="card">
+          <h3>Bankable solutions</h3>
+          <p class="lead">Embed frameworks such as Bankable Nature Solutions and SDG Impact Standards.</p>
+        </div>
+        <div class="card">
+          <h3>Domain‑specific insights</h3>
+          <p class="lead">Climate transition, water security, agricultural resilience, and biodiversity integrated into deal flow and portfolio monitoring.</p>
+        </div>
+        <div class="card">
+          <h3>Scalable workflow</h3>
+          <p class="lead">One end-to-end tool for screening, valuation, due diligence, monitoring, and LP reporting.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="who" aria-labelledby="who-title">
+      <h2 id="who-title">Who We Are</h2>
       <p class="lead">
-        1) Ingests fragmented ESG/impact data · 2) Runs AI‑assisted underwriting (risk, return, impact) ·
-        3) Produces audit‑ready memos and dashboards.
+        Project A was initiated by <strong>Xinzhi Yao</strong>, who brings nearly a decade of experience in the impact finance and sustainability domain.
+        Over this time, I observed first-hand how fragmented data and a lack of technology consistently slowed capital deployment and weakened impact measurement.
+      </p>
+      <p class="lead">
+        With this insight, I started Project A to build the kind of AI-powered Impact Portfolio Management tool I wished existed — one that
+        unifies financial rigor with impact analytics and makes it easier for investors to deploy capital with confidence.
       </p>
     </section>
 
-    <footer id="contact">
+    <section id="join" aria-labelledby="join-title">
+      <h2 id="join-title">Join Us</h2>
+      <p class="lead">
+        Project A is in development. We are seeking partners, investors, and collaborators to help scale this solution and advance the future of Impact Portfolio Management — moving capital from dry powder to deployed impact.
+      </p>
+      <p>
+        👉 <a class="cta" href="https://demo.impactport.com" target="_blank" rel="noopener noreferrer">Try the Live Demo</a>
+        <a class="cta ghost" href="mailto:contact@impactport.com?subject=Project%20A%20-%20Get%20Updates">Get updates via email</a>
+      </p>
+    </section>
+
+    <footer id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title" style="position:absolute;left:-9999px;">Contact</h2>
       <p>Contact: <a href="mailto:contact@impactport.com">contact@impactport.com</a></p>
-      <p>© <span id="y"></span> ImpactPort. All rights reserved.</p>
+      <p>© <span id="y"></span> Project A. All rights reserved.</p>
     </footer>
   </div>
+
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
