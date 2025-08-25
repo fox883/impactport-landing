@@ -1,2 +1,65 @@
 <h1>ImpactPort</h1>
 <p>AI-enabled Impact Portfolio Management Tool</p>
+
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ImpactPort — AI‑enabled Impact Portfolio Management</title>
+  <meta name="description" content="ImpactPort is an AI-enabled impact portfolio management tool unifying project management, financial analysis, and impact analytics." />
+  <meta name="robots" content="index,follow" />
+  <style>
+    :root { --bg:#0b1020; --fg:#eaf0ff; --muted:#a9b3c7; --accent:#5ee1a0; }
+    html,body { height:100%; margin:0; }
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background:var(--bg); color:var(--fg); }
+    .wrap { max-width: 960px; margin: 0 auto; padding: 56px 20px 80px; }
+    header { display:flex; align-items:center; justify-content:space-between; margin-bottom:24px; }
+    .logo { font-weight:700; letter-spacing:.3px; }
+    nav a { color:var(--muted); text-decoration:none; margin-left:16px; font-size:14px; }
+    .hero { padding: 64px 0; }
+    h1 { font-size: clamp(28px, 5vw, 44px); line-height:1.1; margin:0 0 16px; }
+    p.lead { color:var(--muted); font-size: clamp(16px, 2.8vw, 18px); margin:0 0 28px; max-width: 720px; }
+    .cta { display:inline-block; padding:14px 20px; border-radius:10px; background:var(--accent); color:#0b1020; font-weight:700; text-decoration:none; }
+    .cta:focus, .cta:hover { opacity:.9; }
+    .ghost { margin-left:12px; border:1px solid #2b3557; color:var(--fg); background:transparent; }
+    footer { margin-top:80px; border-top:1px solid #1b2547; padding-top:20px; color:var(--muted); font-size:13px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">ImpactPort</div>
+      <nav>
+        <a href="#how">How it works</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h1>AI‑enabled Impact Portfolio Management</h1>
+      <p class="lead">
+        Unifies project management, financial modeling, and impact analytics into one workflow —
+        purpose‑built for impact investors, PE/VC, and MDB‑aligned funds.
+      </p>
+      <a class="cta" href="https://demo.impactport.com" target="_blank" rel="noopener noreferrer">👉 Try the Live Demo</a>
+      <a class="cta ghost" href="#contact">Get updates</a>
+    </section>
+
+    <section id="how">
+      <h2>How it works</h2>
+      <p class="lead">
+        1) Ingests fragmented ESG/impact data · 2) Runs AI‑assisted underwriting (risk, return, impact) ·
+        3) Produces audit‑ready memos and dashboards.
+      </p>
+    </section>
+
+    <footer id="contact">
+      <p>Contact: <a href="mailto:contact@impactport.com">contact@impactport.com</a></p>
+      <p>© <span id="y"></span> ImpactPort. All rights reserved.</p>
+    </footer>
+  </div>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
