@@ -3,120 +3,390 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Project A — AI‑powered Impact Portfolio Management</title>
-  <meta name="description" content="Project A is an AI-enabled investment management solution unifying financial performance and impact management for PE/VC and impact funds." />
+  <title>Project A — ImpactPort | Impact Portfolio Management, With a Smile</title>
+  <meta name="description" content="Project A by ImpactPort — where spreadsheets don't dictate your bedtime and portfolio management never feels like dental surgery." />
   <meta name="robots" content="index,follow" />
-  <!-- Basic OG for clean link previews -->
-  <meta property="og:title" content="Project A — AI‑powered Impact Portfolio Management" />
-  <meta property="og:description" content="Bridge financial rigor and impact in one tool — from screening to LP reporting." />
+  <meta property="og:title" content="Project A — ImpactPort | Impact Portfolio Management, With a Smile" />
+  <meta property="og:description" content="Finance and impact — faster, smarter, and just cheeky enough to keep you awake during LP reporting season." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://impactport.com" />
   <style>
-    :root { --bg:#0b1020; --fg:#eaf0ff; --muted:#a9b3c7; --accent:#5ee1a0; }
+    :root { 
+      --bg: linear-gradient(135deg, #0b1020 0%, #1a1f35 50%, #2a2f45 100%);
+      --card-bg: rgba(255,255,255,0.05);
+      --fg: #eaf0ff; 
+      --muted: #a9b3c7; 
+      --accent: #5ee1a0;
+      --accent-hover: #4dd190;
+      --border: rgba(255,255,255,0.1);
+    }
+    
     html,body { height:100%; margin:0; }
-    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background:var(--bg); color:var(--fg); }
-    .wrap { max-width: 1000px; margin: 0 auto; padding: 56px 20px 80px; }
-    header { display:flex; align-items:center; justify-content:space-between; margin-bottom:24px; }
-    .logo { font-weight:800; letter-spacing:.3px; }
-    nav a { color:var(--muted); text-decoration:none; margin-left:16px; font-size:14px; }
-    nav a:hover, nav a:focus { color:var(--fg); }
-    .hero { padding: 64px 0; }
-    h1 { font-size: clamp(28px, 5vw, 44px); line-height:1.1; margin:0 0 12px; }
-    h2 { font-size: clamp(20px, 3.5vw, 28px); margin: 40px 0 12px; }
-    p.lead { color:var(--muted); font-size: clamp(16px, 2.8vw, 18px); margin:0 0 28px; max-width: 780px; }
-    ul { color:var(--muted); margin: 8px 0 20px; padding-left: 18px; }
-    li { margin: 6px 0; }
-    .cta { display:inline-block; padding:14px 20px; border-radius:10px; background:var(--accent); color:#0b1020; font-weight:700; text-decoration:none; }
-    .cta:focus, .cta:hover { opacity:.9; }
-    .ghost { margin-left:12px; border:1px solid #2b3557; color:var(--fg); background:transparent; }
-    .grid { display:grid; gap:18px; grid-template-columns: 1fr; }
-    @media (min-width: 760px) { .grid { grid-template-columns: 1fr 1fr; } }
-    .card { border:1px solid #1b2547; border-radius:12px; padding:18px; background: rgba(255,255,255,0.02); }
-    footer { margin-top:80px; border-top:1px solid #1b2547; padding-top:20px; color:var(--muted); font-size:13px; }
-    a { color: var(--accent); }
+    body { 
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; 
+      background: var(--bg); 
+      color: var(--fg);
+      line-height: 1.6;
+    }
+    
+    .wrap { max-width: 1200px; margin: 0 auto; padding: 40px 20px 80px; }
+    
+    /* Header with glassmorphism */
+    header { 
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between; 
+      margin-bottom: 60px;
+      padding: 16px 32px;
+      background: var(--card-bg);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+    }
+    
+    .logo { 
+      font-weight: 800; 
+      font-size: 24px;
+      background: linear-gradient(135deg, var(--accent), #4dd190, #3bc17d);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    nav a { 
+      color: var(--muted); 
+      text-decoration: none; 
+      margin-left: 32px; 
+      font-size: 15px;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    nav a:hover, nav a:focus { 
+      color: var(--accent); 
+      transform: translateY(-2px);
+    }
+    
+    /* Hero with animated gradient */
+    .hero { 
+      padding: 80px 0; 
+      text-align: center;
+      position: relative;
+    }
+    
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle, rgba(94, 225, 160, 0.1) 0%, transparent 70%);
+      border-radius: 50%;
+      transform: translateX(-50%);
+      animation: pulse 4s ease-in-out infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 0.3; transform: translateX(-50%) scale(1); }
+      50% { opacity: 0.6; transform: translateX(-50%) scale(1.2); }
+    }
+    
+    h1 { 
+      font-size: clamp(32px, 6vw, 56px); 
+      line-height: 1.1; 
+      margin: 0 0 24px; 
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--fg), var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      position: relative;
+      z-index: 1;
+    }
+    
+    h2 { 
+      font-size: clamp(24px, 4vw, 36px); 
+      margin: 60px 0 20px; 
+      font-weight: 700;
+    }
+    
+    .tagline {
+      font-size: clamp(18px, 3vw, 24px);
+      color: var(--accent);
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+    
+    p.lead { 
+      color: var(--muted); 
+      font-size: clamp(16px, 2.8vw, 20px); 
+      margin: 0 0 40px; 
+      max-width: 800px; 
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    /* Enhanced CTA buttons */
+    .cta { 
+      display: inline-block; 
+      padding: 18px 32px; 
+      border-radius: 12px; 
+      background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+      color: #0b1020; 
+      font-weight: 700; 
+      text-decoration: none;
+      font-size: 16px;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 25px rgba(94, 225, 160, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .cta::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s;
+    }
+    
+    .cta:hover::before {
+      left: 100%;
+    }
+    
+    .cta:focus, .cta:hover { 
+      transform: translateY(-3px);
+      box-shadow: 0 12px 35px rgba(94, 225, 160, 0.4);
+    }
+    
+    .ghost { 
+      margin-left: 16px; 
+      border: 2px solid var(--border); 
+      color: var(--fg); 
+      background: var(--card-bg);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    }
+    
+    /* Layer Cards */
+    .layers { margin: 80px 0; }
+    .layer-grid { 
+      display: grid; 
+      gap: 24px; 
+      grid-template-columns: 1fr; 
+      margin-top: 40px;
+    }
+    @media (min-width: 768px) { 
+      .layer-grid { grid-template-columns: repeat(3, 1fr); } 
+    }
+    
+    .layer-card {
+      padding: 32px 24px;
+      background: var(--card-bg);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .layer-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--accent), #4dd190, #3bc17d);
+    }
+    
+    .layer-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+      border-color: var(--accent);
+    }
+    
+    .layer-emoji {
+      font-size: 48px;
+      margin-bottom: 16px;
+      display: block;
+    }
+    
+    .layer-title {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: var(--accent);
+    }
+    
+    /* Problem section */
+    .problem-grid {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: 1fr;
+      margin-top: 32px;
+    }
+    @media (min-width: 768px) {
+      .problem-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    
+    .problem-card {
+      padding: 24px;
+      background: var(--card-bg);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      transition: all 0.3s ease;
+    }
+    
+    .problem-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(255,255,255,0.15);
+    }
+    
+    /* Early access banner */
+    .early-access {
+      background: linear-gradient(135deg, rgba(94, 225, 160, 0.1), rgba(77, 209, 144, 0.1));
+      border: 1px solid var(--accent);
+      border-radius: 20px;
+      padding: 40px;
+      text-align: center;
+      margin: 60px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .early-access::before {
+      content: '🚀';
+      position: absolute;
+      top: -20px;
+      right: -20px;
+      font-size: 100px;
+      opacity: 0.1;
+    }
+    
+    footer { 
+      margin-top: 80px; 
+      border-top: 1px solid var(--border); 
+      padding-top: 40px; 
+      color: var(--muted); 
+      font-size: 14px; 
+      text-align: center;
+    }
+    
+    a { color: var(--accent); transition: color 0.3s ease; }
+    a:hover { color: var(--accent-hover); }
   </style>
 </head>
 <body>
   <div class="wrap">
     <header>
-      <div class="logo">Project A</div>
+      <div class="logo">ImpactPort</div>
       <nav>
-        <a href="#problem">Problem</a>
-        <a href="#approach">Approach</a>
+        <a href="#problem">Why We Exist</a>
+        <a href="#layers">The Platform</a>
         <a href="#who">Who We Are</a>
         <a href="#join">Join Us</a>
-        <a href="#contact">Contact</a>
       </nav>
     </header>
 
-    <section class="hero" aria-labelledby="hero-title">
-      <h1 id="hero-title">AI‑powered Impact Portfolio Management</h1>
+    <section class="hero">
+      <div class="tagline">Impact Portfolio Management, With a Smile</div>
+      <h1>Project A by ImpactPort</h1>
       <p class="lead">
-        Project A is a digital investment management solution designed to bridge the gap between financial performance and impact management.
-        It combines private equity discipline with sustainability frameworks to help investors deploy capital faster, smarter, and with measurable outcomes.
+        We believe spreadsheets shouldn't dictate your bedtime, and portfolio management should never feel like dental surgery. 
+        Project A blends finance and impact — faster, smarter, and just cheeky enough to keep you awake during LP reporting season.
       </p>
-      <a class="cta" href="https://demo.impactport.com" target="_blank" rel="noopener noreferrer">👉 Try the Live Demo</a>
-      <a class="cta ghost" href="#join">Get updates</a>
+      <a class="cta" href="https://app.impactport.com" target="_blank" rel="noopener">👉 Try the Live Demo</a>
+      <a class="cta ghost" href="#join">Get Early Access</a>
     </section>
 
-    <section id="problem" aria-labelledby="problem-title">
-      <h2 id="problem-title">The Problem We Solve</h2>
-      <ul>
-        <li><strong>Fragmented &amp; unreliable data</strong> — ESG, and other impact data are siloed, inconsistent, and costly to verify.</li>
-        <li><strong>No unified lens for finance + impact</strong> — Current tools either model returns (ROI, IRR, LBO) or impact (SDGs, carbon removal, biodiversity). Funds lack a single platform to weigh risk, return, and impact together.</li>
-        <li><strong>Lean investment teams</strong> — PE and VC funds run lean, with limited in-house data science or impact analytics. Existing SaaS tools are either too generic or too costly to customize.</li>
-      </ul>
+    <div class="early-access">
+      <h3 style="margin-top:0; color: var(--accent);">👉 Participate now and enjoy early, free access while we build</h3>
+      <p style="margin-bottom:0;">Guaranteed to last longer than your morning espresso shot.</p>
+    </div>
+
+    <section id="problem">
+      <h2>Why We Exist</h2>
+      <p class="lead">The finance sector is brilliant at looking serious, but:</p>
+      
+      <div class="problem-grid">
+        <div class="problem-card">
+          <h3>📊 Data is scattered</h3>
+          <p>ESG, finance, and impact metrics hide everywhere like a game of corporate hide-and-seek.</p>
+        </div>
+        <div class="problem-card">
+          <h3>🤝 Finance and impact don't talk</h3>
+          <p>Like two departments who only meet at awkward company retreats.</p>
+        </div>
+        <div class="problem-card">
+          <h3>⚡ Small teams carry big loads</h3>
+          <p>Juggling compliance, reporting, and investor calls while hoping tools don't crash mid-board meeting.</p>
+        </div>
+      </div>
+      
+      <p class="lead" style="text-align: center; margin-top: 40px; font-weight: 600;">
+        <strong>Project A closes that gap.</strong>
+      </p>
     </section>
 
-    <section id="approach" aria-labelledby="approach-title">
-      <h2 id="approach-title">Our Approach</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>AI‑enabled modeling</h3>
-          <p class="lead">Integrated financial analytics (DCF, NPV, ROI, IRR) with impact metrics (carbon, water, agriculture, biodiversity).</p>
+    <section id="layers" class="layers">
+      <h2>The Three Layers</h2>
+      
+      <div class="layer-grid">
+        <div class="layer-card">
+          <span class="layer-emoji">🧭</span>
+          <div class="layer-title">Compass Layer</div>
+          <p><strong>Project Management & Data Entry</strong></p>
+          <p>Guided by an impact portfolio manager with 40 years of experience. Built with server-side encryption so data is yours alone — analytical for you, invisible to us.</p>
         </div>
-        <div class="card">
-          <h3>Bankable solutions</h3>
-          <p class="lead">Embed frameworks such as Bankable Nature Solutions and SDG Impact Standards.</p>
+        
+        <div class="layer-card">
+          <span class="layer-emoji">🚂</span>
+          <div class="layer-title">Engine Layer</div>
+          <p><strong>Data Management & Integration</strong></p>
+          <p>Where chaos goes to die. LLMs and ML for financials (DCF, IRR, NPV). Unlike spreadsheets, our ML delivers accurate predictive analysis — spotting trends before Excel can.</p>
         </div>
-        <div class="card">
-          <h3>Domain‑specific insights</h3>
-          <p class="lead">Climate transition, water security, agricultural resilience, and biodiversity integrated into deal flow and portfolio monitoring.</p>
-        </div>
-        <div class="card">
-          <h3>Scalable workflow</h3>
-          <p class="lead">One end-to-end tool for screening, valuation, due diligence, monitoring, and LP reporting.</p>
+        
+        <div class="layer-card">
+          <span class="layer-emoji">🌅</span>
+          <div class="layer-title">Horizon Layer</div>
+          <p><strong>Domain-Focused AI Models</strong></p>
+          <p>Advanced AI trained on climate, water, agriculture, and biodiversity. Translates impact into investment-grade KPIs your IC can actually use.</p>
         </div>
       </div>
     </section>
 
-    <section id="who" aria-labelledby="who-title">
-      <h2 id="who-title">Who We Are</h2>
+    <section id="who">
+      <h2>Who We Are</h2>
       <p class="lead">
-        Project A was initiated by <strong>Xinzhi Yao</strong>, who brings nearly a decade of experience in the impact finance and sustainability domain.
-        Over this time, he experienced first-hand how fragmented data and a lack of technology consistently slowed capital deployment and weakened impact measurement.
+        Founded by <strong>Xinzhi Yao</strong>, with nearly a decade in impact finance and sustainability. 
+        He saw capital slowed by bad data, credibility lost to fragmented tools, and teams stretched thinner than a midnight PowerPoint.
       </p>
       <p class="lead">
-        With this insight, I started Project A to build the kind of AI-powered Impact Portfolio Management tool I wished existed — one that
-        unifies financial rigor with impact analytics and makes it easier for investors to deploy capital with confidence.
+        Instead of more patchwork, he built the tool we all wished existed — one that unifies finance with impact, while keeping a wink of humor.
       </p>
     </section>
 
-    <section id="join" aria-labelledby="join-title">
-      <h2 id="join-title">Join Us</h2>
+    <section id="join">
+      <h2>Join Us</h2>
       <p class="lead">
-        Project A is in development. We are seeking partners, investors, and collaborators to help scale this solution and advance the future of Impact Portfolio Management — moving capital from dry powder to deployed impact.
+        Think of it like checking into a five-star resort while it's still under construction: the pool tiles may not be finished, 
+        but the bar is open and the cocktails are free. The earlier you join, the more you shape the lobby — and the drinks menu.
       </p>
-      <p>
-        👉 <a class="cta" href="https://demo.impactport.com" target="_blank" rel="noopener noreferrer">Try the Live Demo</a>
-        <a class="cta ghost" href="mailto:contact@impactport.com?subject=Project%20A%20-%20Get%20Updates">Get updates via email</a>
-      </p>
+      
+      <div style="text-align: center; margin-top: 40px;">
+        <a class="cta" href="https://app.impactport.com" target="_blank" rel="noopener">🚀 See the Demo</a>
+        <a class="cta ghost" href="mailto:contact@impactport.com?subject=Project%20A%20-%20Early%20Access">📬 Get Free Access</a>
+      </div>
     </section>
 
-    <footer id="contact" aria-labelledby="contact-title">
-      <h2 id="contact-title" style="position:absolute;left:-9999px;">Contact</h2>
-      <p>Contact: <a href="mailto:contact@impactport.com">contact@impactport.com</a></p>
-      <p>© <span id="y"></span> Project A. All rights reserved.</p>
+    <footer>
+      <p>📩 <a href="mailto:contact@impactport.com">contact@impactport.com</a></p>
+      <p>© <span id="y"></span> ImpactPort / Project A. All rights reserved.</p>
     </footer>
   </div>
 
